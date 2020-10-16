@@ -41,6 +41,10 @@
   min-height: 500px;    /* Set slide height here */
 
 }
+
+/* .img2 {
+  border-radius: 50%;
+} */
   </style>
 </head>
 
@@ -80,7 +84,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <font color='white'><input style='height:25px' type="text" class="form-control" placeholder="Search"
+            <font color='white'><input [(ngModel)]="inputdata" (change)="setValue()" style='height:25px' type="text" class="form-control" placeholder="Search"
                 [(ngModel)]="inputdata"></font>
           </a>
         </li>
@@ -102,19 +106,20 @@
           </a>
         </li >
         <li class="nav-item">
-         <a class="nav-link" ><img class="circular--square" [src]="picture" (click)="getDate()" style='width: 20px; height:20px'data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">&nbsp;<font color="white">{{nickname}}</font></a>
+         <a class="nav-link" ><img class="circular--square" [src]="picture" (click)="getDate()" style='width: 20px; height:20px'data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">&nbsp;<font color="white">{{nickname}}</font>&nbsp;&nbsp;<i *ngIf="authService.isLoggedIn" class="glyphicon glyphicon-bell" style="font-size:15px; color:white"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i *ngIf="authService.isLoggedIn" class="glyphicon glyphicon-shopping-cart" style="font-size:15px; color:white"></i></a>
         </li>
+       
         </ul>
     </div>
   </nav>
   <br>
   
   <div class="card div1" style="width: 18rem;" id="multiCollapseExample1" class="collapse multi-collapse pull-right"  >
-  <img class="card-img-top" src="/assets/console.jpg" alt="Card image cap">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="card-img-top" style="height:50px; width:50px;" [src]="picture" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{nickname}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" style="background: url(/assets/console.jpg)" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text">Track Your Orders<br>Settings<br>
+          <a href="#"  class="btn btn-primary">Go TO Dashboard</a>
   
 </div>
 
