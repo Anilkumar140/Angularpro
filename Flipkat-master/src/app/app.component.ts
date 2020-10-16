@@ -11,7 +11,7 @@ import { getLocaleDateFormat } from '@angular/common';
 })
 export class AppComponent {
   title = 'Daily Deals';
-  @Input()
+  
   inputdata:any;
   isCollapsed = false;
   nickname:any;
@@ -24,5 +24,7 @@ this.authService.otpAuth();
 this.nickname=localStorage.getItem('nickname');
 this.picture=localStorage.getItem('picture');
 }
-
+setValue(){
+  localStorage.setItem("searchval",this.inputdata);
+}
 }
