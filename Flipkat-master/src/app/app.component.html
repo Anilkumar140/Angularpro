@@ -106,7 +106,7 @@
           </a>
         </li >
         <li class="nav-item">
-         <a class="nav-link" ><img class="circular--square" [src]="picture" (click)="getDate()" style='width: 20px; height:20px'data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">&nbsp;<font color="white">{{nickname}}</font>&nbsp;&nbsp;<i *ngIf="authService.isLoggedIn" class="glyphicon glyphicon-bell" style="font-size:15px; color:white"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i *ngIf="authService.isLoggedIn" class="glyphicon glyphicon-shopping-cart" style="font-size:15px; color:white"></i></a>
+         <a class="nav-link" ><img class="circular--square" [src]="picture" (click)="getDate()" style='width: 20px; height:20px'data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">&nbsp;<font color="white">{{nickname}}</font>&nbsp;&nbsp;<i *ngIf="authService.isLoggedIn" class="glyphicon glyphicon-bell" style="font-size:15px; color:white"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i *ngIf="authService.isLoggedIn"class="glyphicon glyphicon-shopping-cart" style="font-size:15px; color:white"></i></a>
         </li>
        
         </ul>
@@ -117,6 +117,7 @@
   <div class="card div1" style="width: 18rem;" id="multiCollapseExample1" class="collapse multi-collapse pull-right"  >
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="card-img-top" style="height:50px; width:50px;" [src]="picture" alt="Card image cap">
   <div class="card-body">
+    <i class="glyphicon glyphicon-bell" style="font-size:15px; color:black"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-shopping-cart" style="font-size:15px; color:black"></i>
     <h5 class="card-title">{{nickname}}</h5>
     <p class="card-text">Track Your Orders<br>Settings<br>
           <a href="#"  class="btn btn-primary">Go TO Dashboard</a>
